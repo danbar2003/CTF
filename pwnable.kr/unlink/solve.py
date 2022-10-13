@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from pwn import ELF, args, process, ssh, p32, cyclic
+from pwn import ELF, args, process, ssh, p32
 
 
 elf = ELF('./unlink')
