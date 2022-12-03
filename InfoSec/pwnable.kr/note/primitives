@@ -1,0 +1,28 @@
+mem_arr[257] = [create_note_1, create_note_2]
+
+create note:
+  allocate at mem_arr
+
+write_note:
+  index <= 256
+  mem_arr[index] != NULL
+
+  BUG: gets
+
+read_note:
+  index <= 256
+  mem_arr[index] != NULL
+
+
+  printf(%s, mem_arr[index])
+
+delete_note:
+  index <= 256
+  mem_arr[index] != NULL
+  
+  munmap()
+  memarr[index] = NULL
+
+  
+  
+
