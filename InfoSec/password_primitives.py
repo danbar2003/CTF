@@ -7,7 +7,6 @@ class PasswordPrimitives:
         self.io = io
         self.add_name(name)
         self.key = self._get_key()
-        print("WTF")
 
     def _validate_prompt(self):
         self.io.recvuntil(b'0) Exit')
@@ -18,9 +17,7 @@ class PasswordPrimitives:
         return data[: -1]
 
     def add_name(self, name: bytes):
-        print("WTF")
         self.io.recvuntil(b'Please type your name:')
-        print("WTF")
         assert len(name) <= 0x20
         self.io.send(name)
 
